@@ -31,7 +31,7 @@ Despite the advancement of tools and technologies, mankind has yet to develop ap
 1. Clone the repository:
             
    ```
-   git clone git@github.com:achiit/teleconvo_ocr.git
+   git@github.com:achiit/teleconvo_final.git
    ```
 
 2. Open your code favourite editor (VS Code, Android Studio etc)
