@@ -165,29 +165,56 @@ class _HomePageState extends State<HomePage> {
           ),
           Container(
               child: Center(
-                  child: SizedBox.expand(
-                      child: FlatButton(
-                          highlightColor: Color(0xFFA8DEE0),
-                          splashColor: Color(0xffF9E2AE),
-                          onPressed: () => od.optionsDialogBox(context),
-                          child: Text("Text Extraction from Images",
-                              style: TextStyle(
-                                  fontSize: 27.0,
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold))))),
+                child: SizedBox.expand(
+                  child: TextButton(
+                    style: TextButton.styleFrom(
+                      backgroundColor: Color(0xFFA8DEE0),
+                      padding: EdgeInsets.all(10.0),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(16.0),
+                      ),
+                      //SplashColor: Color(0xffF9E2AE).withOpacity(0.4),
+
+                    ),
+                    onPressed: () => od.optionsDialogBox(context),
+                    child: Text(
+                      "Text Extraction from Images",
+                      style: TextStyle(
+                        fontSize: 27.0,
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+
+
+                ),
+              ),
               color: Color(0xffb56576)),
           Container(
               child: Center(
-                  child: SizedBox.expand(
-                      child: FlatButton(
-                          highlightColor: Color(0xFFF9E2E),
-                          splashColor: Color(0xFFFBC78D),
-                          onPressed: () => getCurrImage(),
-                          child: Text("Currency Identifier",
-                              style: TextStyle(
-                                  fontSize: 27.0,
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold))))),
+                child: SizedBox.expand(
+                  child: TextButton(
+                    style: TextButton.styleFrom(
+                      backgroundColor: Color(0xFFF9E2E),
+                      padding: EdgeInsets.all(10.0),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(16.0),
+                      ),
+                      //overlayColor: Color(0xFFFBC78D).withOpacity(0.4),
+                    ),
+                    onPressed: () => getCurrImage(),
+                    child: Text(
+                      "Currency Identifier",
+                      style: TextStyle(
+                        fontSize: 27.0,
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
               color: Color(0xffe56b6f)),
         ],
         scrollDirection: Axis.horizontal,

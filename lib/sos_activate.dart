@@ -15,9 +15,9 @@ class _SOSActivateState extends State<SOSActivate> {
     return Container(
         child: Center(
             child: SizedBox.expand(
-                child: FlatButton(
-                    highlightColor: Color(0xff1c4257),
-                    splashColor: Color(0xff253340),
+                child: TextButton(
+                    //highlightColor: Color(0xff1c4257),
+                    //splashColor: Color(0xff253340),
                     onPressed: () => {Fluttertoast.showToast(msg: "SOS send succesfully", gravity: ToastGravity.TOP)},
                     child: Text("Send SOS",
                         style: TextStyle(

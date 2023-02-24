@@ -30,54 +30,73 @@ class ocrDialog {
                       new Container(
                         width: 300.0,
                         height: 150,
-                        child: RaisedButton(
+                        child: ElevatedButton(
                           onPressed: _stopTts,
-                          padding: const EdgeInsets.all(10.0),
-                          child: const Text('Stop',
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold)),
-                          color: Color(0xFFb56576),
-                          elevation: 5.0,
-                          shape: new RoundedRectangleBorder(
-                              borderRadius: new BorderRadius.circular(16.0)),
+                          style: ElevatedButton.styleFrom(
+                            primary: Color(0xFFb56576),
+                            elevation: 5.0,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(16.0),
+                            ),
+                            padding: EdgeInsets.all(10.0),
+                          ),
+                          child: Text(
+                            'Stop',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
                         ),
                       ),
                       new Container(height: 10),
                       new Container(
                         width: 300.0,
                         height: 150,
-                        child: RaisedButton(
+                        child: ElevatedButton(
                           onPressed: () {
                             _speakOCR(text);
                           },
-                          padding: const EdgeInsets.all(10.0),
-                          child: const Text('Replay',
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold)),
-                          color: Color(0xffb56576),
-                          elevation: 5.0,
-                          shape: new RoundedRectangleBorder(
-                              borderRadius: new BorderRadius.circular(16.0)),
+                          style: ElevatedButton.styleFrom(
+                            primary: Color(0xffb56576),
+                            elevation: 5.0,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(16.0),
+                            ),
+                            padding: EdgeInsets.all(10.0),
+                          ),
+                          child: Text(
+                            'Replay',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
                         ),
                       ),
                       new Container(height: 10),
                       new Container(
                         width: 300.0,
                         height: 150,
-                        child: RaisedButton(
+                        child: ElevatedButton(
                           onPressed: _pauseTts,
-                          padding: const EdgeInsets.all(10.0),
-                          child: const Text('Pause',
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold)),
-                          color: Color(0xffb56576),
-                          elevation: 5.0,
-                          shape: new RoundedRectangleBorder(
-                              borderRadius: new BorderRadius.circular(16.0)),
+                          style: ElevatedButton.styleFrom(
+                            primary: Color(0xffb56576),
+                            elevation: 5.0,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(16.0),
+                            ),
+                            padding: EdgeInsets.all(10.0),
+                          ),
+                          child: Text(
+                            'Pause',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
                         ),
+
                       ),
                       new Container(height: 10),
                       new Image.memory(pngByteData),

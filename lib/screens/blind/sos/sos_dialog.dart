@@ -3,7 +3,6 @@ import 'package:hexcolor/hexcolor.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class sosDialog {
-
   TextEditingController _controller1 = new TextEditingController();
   TextEditingController _controller2 = new TextEditingController();
   TextEditingController _controller3 = new TextEditingController();
@@ -14,53 +13,66 @@ class sosDialog {
         context: context,
         builder: (BuildContext context) {
           return AlertDialog(
-              title: Text("Enter phone numbers you would like to contact"),
-              content: new SingleChildScrollView(
-                  child: new ListBody(children: <Widget>[
-                TextFormField(
-                  controller: _controller4,
-                  decoration: InputDecoration(
-                    labelText: 'Enter your name:',
+            title: Text("Enter phone numbers you would like to contact"),
+            content: new SingleChildScrollView(
+              child: new ListBody(
+                children: <Widget>[
+                  TextFormField(
+                    controller: _controller4,
+                    decoration: InputDecoration(
+                      labelText: 'Enter your name:',
+                    ),
                   ),
-                ),
-                TextFormField(
-                  keyboardType: TextInputType.number,
-                  controller: _controller1,
-                  decoration: InputDecoration(
-                    labelText: 'Enter phone number 1:',
+                  TextFormField(
+                    keyboardType: TextInputType.number,
+                    controller: _controller1,
+                    decoration: InputDecoration(
+                      labelText: 'Enter phone number 1:',
+                    ),
                   ),
-                ),
-                TextFormField(
-                  keyboardType: TextInputType.number,
-                  controller: _controller2,
-                  decoration: InputDecoration(
-                    labelText: 'Enter phone number 2:',
+                  TextFormField(
+                    keyboardType: TextInputType.number,
+                    controller: _controller2,
+                    decoration: InputDecoration(
+                      labelText: 'Enter phone number 2:',
+                    ),
                   ),
-                ),
-                TextFormField(
-                  keyboardType: TextInputType.number,
-                  controller: _controller3,
-                  decoration: InputDecoration(
-                    labelText: 'Enter phone number 3:',
+                  TextFormField(
+                    keyboardType: TextInputType.number,
+                    controller: _controller3,
+                    decoration: InputDecoration(
+                      labelText: 'Enter phone number 3:',
+                    ),
                   ),
-                ),
-                new SizedBox(height: 10),
-                new RaisedButton(
-                  onPressed: () {
-                    setNumbers((_controller1.text), (_controller2.text),
-                        (_controller3.text), _controller4.text);
-                  },
-                  color: Color(0xFFeaac8b),
-                  child: Text(
-                    "Save Information",
-                    style: TextStyle(
-                        color: Colors.white, fontWeight: FontWeight.bold),
+                  new SizedBox(height: 10),
+                  new ElevatedButton(
+                    onPressed: () {
+                      setNumbers(
+                        _controller1.text,
+                        _controller2.text,
+                        _controller3.text,
+                        _controller4.text,
+                      );
+                    },
+                    style: ElevatedButton.styleFrom(
+                      primary: Color(0xFFeaac8b),
+                      elevation: 5.0,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(16.0),
+                      ),
+                    ),
+                    child: Text(
+                      'Save Information',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
                   ),
-                  elevation: 5.0,
-                  shape: new RoundedRectangleBorder(
-                      borderRadius: new BorderRadius.circular(16.0)),
-                )
-              ])));
+                ],
+              ),
+            ),
+          );
         });
   }
 

@@ -80,21 +80,25 @@ class CurrPage {
                         width: 300.0,
                         height: 420.0,
                         //decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(16.0))),
-                        child: RaisedButton(
+                        child: ElevatedButton(
                           onPressed: () {
                             _speak(text);
                           },
-                          padding: const EdgeInsets.all(10.0),
-                          child: const Text(
+                          style: ElevatedButton.styleFrom(
+                            primary: Color(0xffe56b6f),
+                            elevation: 5.0,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(16.0),
+                            ),
+                            padding: EdgeInsets.all(10.0),
+                          ),
+                          child: Text(
                             'Replay',
                             style: TextStyle(
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold),
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
-                          color: Color(0xffe56b6f),
-                          elevation: 5.0,
-                          shape: new RoundedRectangleBorder(
-                              borderRadius: new BorderRadius.circular(16.0)),
                         ),
                       ),
                       new Container(

@@ -25,7 +25,7 @@ dependencies:
     sdk: flutter
 
   english_words: ^3.1.5
-  flutter_tts: ^1.2.7
+  flutter_tts: ^3.0.0
   hexcolor: ^1.0.4
   splashscreen:
   image_picker: ^0.6.7+11
